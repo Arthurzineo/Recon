@@ -1,0 +1,6 @@
+Para criar a variavel de ambiente com a senha do Open:
+
+export OPENSEARCH_INITIAL_ADMIN_PASSWORD='sua_senha_aqui'
+
+Executar:
+sudo sysctl -w vm.max_map_count=262144
