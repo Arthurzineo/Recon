@@ -1,0 +1,75 @@
+
+// Struct para o índice SUBDOMAIN
+type Subdomain struct {
+	Timestamp                time.Time `json:"@timestamp"`
+	ServerAddress            string    `json:"server.address"`
+	ServerDomain             string    `json:"server.domain"`
+	ServerNameserver         string    `json:"server.nameserver"`
+	ServerIP                 string    `json:"server.ip"`
+	ServerIPBlock            string    `json:"server.ipblock"`
+	VulnerabilityScannerVendor string  `json:"vulnerability.scanner.vendor"`
+}
+
+// Struct para o índice PORT SCANNING
+type PortScan struct {
+	Timestamp                 time.Time `json:"@timestamp"`
+	ServerAddress             string    `json:"server.address"`
+	NetworkProtocol           string    `json:"network.protocol"`
+	ServerIP                  string    `json:"server.ip"`
+	ServerPort                int64     `json:"server.port"`
+	ServerIPBlock             string    `json:"server.ipblock"`
+	ServiceName               string    `json:"service.name"`
+	ServiceState              string    `json:"service.state"`
+	ApplicationVersionNumber  string    `json:"application.version.number"`
+	NetworkTransport          string    `json:"network.transport"`
+	NetworkType               string    `json:"network.type"`
+	VulnerabilityScannerVendor string   `json:"vulnerability.scanner.vendor"`
+}
+
+// Struct para o índice WEB ENUM
+type WebEnum struct {
+	Timestamp                 time.Time `json:"@timestamp"`
+	ServerAddress             string    `json:"server.address"`
+	ServerDomain              string    `json:"server.domain"`
+	ServerIP                  string    `json:"server.ip"`
+	ServerPort                int64     `json:"server.port"`
+	NetworkProtocol           string    `json:"network.protocol"`
+	URLPath                   string    `json:"url.path"`
+	HTTPResponseStatusCode    int64     `json:"http.response.status_code"`
+	URLOriginal               string    `json:"url.original"`
+	URLFull                   string    `json:"url.full"`
+	VulnerabilityScannerVendor string   `json:"vulnerability.scanner.vendor"`
+}
+
+// Struct para o índice WEB VULN
+type WebVuln struct {
+	Timestamp                 time.Time `json:"@timestamp"`
+	ServerAddress             string    `json:"server.address"`
+	ServerDomain              string    `json:"server.domain"`
+	ServerIP                  string    `json:"server.ip"`
+	ServerPort                int64     `json:"server.port"`
+	NetworkProtocol           string    `json:"network.protocol"`
+	ServiceName               string    `json:"service.name"`
+	URLPath                   string    `json:"url.path"`
+	HTTPResponseStatusCode    int64     `json:"http.response.status_code"`
+	VulnerabilityDescription  string    `json:"vulnerability.description"`
+	VulnerabilityName         string    `json:"vulnerability.name"`
+	VulnerabilitySeverity     string    `json:"vulnerability.severity"`
+	URLOriginal               string    `json:"url.original"`
+	URLFull                   string    `json:"url.full"`
+	VulnerabilityScannerVendor string   `json:"vulnerability.scanner.vendor"`
+}
+
+// Struct para o índice INFRA VULN
+type InfraVuln struct {
+	Timestamp                 time.Time `json:"@timestamp"`
+	ServerAddress             string    `json:"server.address"`
+	ServerIP                  string    `json:"server.ip"`
+	ServerPort                int64     `json:"server.port"`
+	NetworkProtocol           string    `json:"network.protocol"`
+	ServiceName               string    `json:"service.name"`
+	VulnerabilityDescription  string    `json:"vulnerability.description"`
+	VulnerabilityName         string    `json:"vulnerability.name"`
+	VulnerabilitySeverity     string    `json:"vulnerability.severity"`
+	VulnerabilityScannerVendor string   `json:"vulnerability.scanner.vendor"`
+}
